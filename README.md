@@ -13,7 +13,7 @@ Este proyecto automatiza el sitio [saucedemo.com](https://www.saucedemo.com) usa
 ---
 
 ## 📁 Estructura del Proyecto
-![img.png](img.png)
+![img_1.png](img_1.png)
 
 
 ---

@@ -2,23 +2,27 @@ package org.store.automation.pages;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.store.automation.config.ConfigReader;
+import org.store.automation.utils.Constans.Constans;
+import org.store.automation.utils.Localizadores;
+
 
 public class LoginPage {
 
     private WebDriver driver;
 
-    // Selectores
-    private By usernameField = By.id("user-name");
-    private By passwordField = By.id("password");
-    private By loginButton   = By.id("login-button");
-    private By errorMessage  = By.cssSelector("h3[data-test='error']");
+    // Selectores usando la clase Localizadores
+    private By usernameField = By.id(Localizadores.USERNAME_FIELD);
+    private By passwordField = By.id(Localizadores.PASSWORD_FIELD);
+    private By loginButton   = By.id(Localizadores.LOGIN_BUTTON);
+    private By errorMessage  = By.cssSelector(Localizadores.ERROR_MESSAGE);
 
     public LoginPage(WebDriver driver) {
         this.driver = driver;
     }
 
     public void navigateTo() {
-        driver.get("https://www.saucedemo.com/");
+        driver.get(ConfigReader.get(Constans.BASE_URL));
     }
 
     public void enterUsername(String username) {

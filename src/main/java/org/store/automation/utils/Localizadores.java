@@ -1,4 +1,4 @@
-package utils.Locators;
+package org.store.automation.utils;
 
 public class Localizadores {
 
